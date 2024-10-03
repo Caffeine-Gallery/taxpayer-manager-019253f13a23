@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const searchTaxPayerForm = document.getElementById('searchTaxPayerForm');
     const searchResult = document.getElementById('searchResult');
     const taxPayerList = document.getElementById('taxPayerList');
+    const themeToggle = document.getElementById('themeToggle');
 
     // Function to display all tax payers
     async function displayAllTaxPayers() {
@@ -52,5 +53,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         } else {
             searchResult.innerHTML = '<p>No TaxPayer found with this TID.</p>';
         }
+    });
+
+    // Theme toggle functionality
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
     });
 });

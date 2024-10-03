@@ -1,10 +1,37 @@
+:root {
+    --bg-color: #1e1e1e;
+    --text-color: #ffffff;
+    --input-bg: #333333;
+    --input-border: #555555;
+    --button-bg: #03dac6;
+    --button-text: #000000;
+    --button-hover: #018786;
+    --heading-color: #bb86fc;
+    --tax-payer-bg: #2d2d2d;
+    --tax-payer-border: #444444;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #1e1e1e;
-    color: #ffffff;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-theme {
+    --bg-color: #f0f0f0;
+    --text-color: #333333;
+    --input-bg: #ffffff;
+    --input-border: #cccccc;
+    --button-bg: #4caf50;
+    --button-text: #ffffff;
+    --button-hover: #45a049;
+    --heading-color: #2196f3;
+    --tax-payer-bg: #ffffff;
+    --tax-payer-border: #e0e0e0;
 }
 
 .container {
@@ -14,7 +41,7 @@ body {
 }
 
 h1, h2 {
-    color: #bb86fc;
+    color: var(--heading-color);
 }
 
 form {
@@ -25,14 +52,14 @@ input[type="text"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    background-color: #333333;
-    border: 1px solid #555555;
-    color: #ffffff;
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: var(--text-color);
 }
 
 button {
-    background-color: #03dac6;
-    color: #000000;
+    background-color: var(--button-bg);
+    color: var(--button-text);
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -40,12 +67,12 @@ button {
 }
 
 button:hover {
-    background-color: #018786;
+    background-color: var(--button-hover);
 }
 
 .tax-payer {
-    background-color: #2d2d2d;
-    border: 1px solid #444444;
+    background-color: var(--tax-payer-bg);
+    border: 1px solid var(--tax-payer-border);
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 5px;
@@ -53,4 +80,10 @@ button:hover {
 
 #searchResult {
     margin-top: 20px;
+}
+
+#themeToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
